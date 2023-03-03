@@ -1,0 +1,19 @@
+<div class="container">
+    {{> file-upload-form}}
+    <div class="container-fluid">
+        <h1>Posts</h1>
+            <div class="row">
+                {{#if posts}}
+                    {{#each posts as |post| }}
+                        {{> post-card post=post }}
+                    {{/each}}
+                {{else }}
+                    <p>There are currently no posts.</p>
+                {{/if}}
+            </div>
+    </div>
+</div>
+
+
+<script src="/js/upload.js"></script>
+
